@@ -1,0 +1,145 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - ask_ability
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - praise
+  - decry
+  - thankyou
+  - ask_schedule
+  - ask_account
+  - ask_book_ticket
+  - ask_garage
+  - request_customer_support
+  - provide_location
+  - provide_time
+  - provide_quantity
+  - ask_payment
+  - ask_route_info
+
+entities:
+  - city_name
+
+slots:
+  start_place:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city_name
+        role: start_place
+  end_place:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: city_name
+        role: end_place
+
+responses:
+  utter_greet:
+    - text: "Chào bạn, tôi đã sẵn sàng lắng nghe"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+    - text: "Quý khách hàng cần được giúp đỡ gì ạ!"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "COACH BOOKING Chào tạm biệt quý khách hàng."
+
+  utter_sorry:
+    - text: "Xin lỗi quý khách hàng! Có thể hệ thống trả lời tự động của COACH BOOKING chưa đủ thông minh để hiểu được câu hỏi của quý khách hàng"
+
+  utter_noworries:
+    - text: "COACH BOOKING luôn sẵn lòng giúp đỡ quý khách hàng bất cứ lúc nào ạ"
+
+  utter_ask_ability:
+    - text: "COACH BOOKING có thể giúp bạn đặt vé hoặc truy xuất thông tin mà bạn cần"
+
+  utter_fallback:
+    - text: "Xin lỗi quý khách hàng, COACH BOOKING chưa hiểu ý muốn của quý khách hàng. Quý khách hàng có thể nói lại được không ạ"
+
+  utter_iamabot:
+    - text: "Tôi là hệ thống trả lời tự động của COACH BOOKING"
+
+  utter_ask_book_ticket:
+    - text: "Quý khách có muốn đặt vé xe không? Nếu có, xin hãy cho tôi biết địa điểm xuất phát và điểm đến."
+
+  utter_confirm_location:
+    - text: "Xin xác nhận địa điểm mà quý khách đã cung cấp: [Địa điểm]. Nếu đúng, xin hãy cho tôi biết thời gian khởi hành."
+
+  utter_select_time:
+    - text: "Xin quý khách vui lòng chọn thời gian khởi hành. Có nhiều chuyến xe trong ngày, hãy cho tôi biết thời gian phù hợp nhất với quý khách."
+
+  utter_ask_ticket_quantity:
+    - text: "Quý khách cần đặt bao nhiêu vé? Xin hãy cho tôi biết số lượng."
+
+  utter_check_booking_info:
+    - text: "Để kiểm tra thông tin đặt vé của quý khách, xin hãy cung cấp mã đặt vé hoặc thông tin cá nhân mà quý khách đã sử dụng để đặt."
+
+  utter_cancel_ticket:
+    - text: "Để hủy vé, quý khách vui lòng cho tôi biết mã đặt vé hoặc thông tin vé mà quý khách muốn hủy."
+
+  utter_refund:
+    - text: "Chúng tôi sẽ hoàn lại [số tiền] cho quý khách, vì quý khách đã huỷ chuyến đi từ [địa điểm] đến [địa điểm]"
+
+  utter_change_seat:
+    - text: "Nếu quý khách muốn thay đổi chỗ ngồi, xin hãy cho tôi biết mã đặt vé và chỗ ngồi mà quý khách muốn chuyển đến."
+
+  utter_customer_support:
+    - text: "Nếu quý khách cần thêm hỗ trợ, xin vui lòng gọi đến số điện thoại hỗ trợ khách hàng: [ Số điện thoại ] hoặc gửi email đến [Địa chỉ email]. Chúng tôi luôn sẵn lòng giúp đỡ quý khách."
+
+  utter_account_info:
+    - text: "Here is your account information."
+
+  utter_thankyou:
+    - text: "Thank you for using our service!"
+
+  utter_schedule_details:
+    - text: "Here are the schedule details."
+
+  utter_route_info:
+    - text: "Vui lòng cho tôi biết chính xác tên địa điểm mà bạn cần tìm."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_sorry
+  - utter_noworries
+  - utter_ask_ability
+  - utter_fallback
+  - utter_iamabot
+  - utter_ask_book_ticket
+  - utter_confirm_location
+  - utter_select_time
+  - utter_ask_ticket_quantity
+  - utter_check_booking_info
+  - utter_cancel_ticket
+  - utter_refund
+  - utter_change_seat
+  - utter_customer_support
+  - action_confirm_booking
+  - utter_account_info
+  - utter_garage_info
+  - utter_thankyou
+  - utter_schedule_details
+  - utter_route_info
+  - action_get_garage_info
+  - action_get_route

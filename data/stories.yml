@@ -1,0 +1,103 @@
+version: "3.1"
+
+stories:
+
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_great
+      - action: utter_happy
+
+  - story: sad path 1
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: affirm
+      - action: utter_happy
+
+  - story: sad path 2
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: mood_unhappy
+      - action: utter_cheer_up
+      - action: utter_did_that_help
+      - intent: deny
+      - action: utter_goodbye
+
+  - story: Greet the user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: Ask for account information
+    steps:
+      - intent: ask_account
+      - action: utter_account_info
+
+  - story: Ask for garage information
+    steps:
+      - intent: ask_garage
+      - action: action_get_garage_info
+
+  - story: Booking Ticket Process
+    steps:
+      - intent: ask_book_ticket
+      - action: utter_ask_book_ticket
+      - intent: provide_location
+      - action: utter_confirm_location
+      - intent: affirm
+      - action: utter_select_time
+      - intent: provide_time
+      - action: utter_ask_ticket_quantity
+      - intent: provide_quantity
+      - action: utter_check_booking_info
+      - intent: affirm
+      - action: action_confirm_booking
+      - action: utter_happy
+
+  - story: Check booking information
+    steps:
+      - intent: ask_schedule
+      - action: utter_schedule_details
+      - intent: ask_account
+      - action: utter_account_info
+
+  - story: Request customer support
+    steps:
+      - intent: request_customer_support
+      - action: utter_customer_support
+
+  - story: Respond to praise
+    steps:
+      - intent: praise
+      - action: utter_thankyou
+
+  - story: Handle complaints
+    steps:
+      - intent: decry
+      - action: utter_sorry
+
+  - story: Fallback response
+    steps:
+      - intent: bot_challenge
+      - action: utter_fallback
+
+  - story: ask ability
+    steps:
+      - intent: ask_ability
+      - action: utter_ask_ability
+
+  - story: Fetch city story
+    steps:
+      - intent: ask_route_info
+      - action: action_get_route

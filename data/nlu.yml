@@ -1,0 +1,242 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - bot ơi
+      - hello
+      - hi
+      - hello em
+      - hello bạn
+      - chào buổi sáng
+      - chào buổi trưa
+      - chào buổi chiều
+      - chào buổi tối
+      - chào bạn
+      - chào em
+      - chào
+      - có ở đây không
+      - bạn có rảnh không
+      - bắt đầu thôi
+      - này anh bạn
+      - này bạn
+      - ê
+      - alo
+      - hey
+      - cho mình hỏi chút
+      - cho mình hỏi tí
+      - bạn ơi, cho mình hỏi
+      - bạn ơi, cho tớ hỏi
+      - em ơi, cho anh hỏi
+      - em ơi, cho chị hỏi
+      - hú
+
+  - intent: goodbye
+    examples: |
+      - tạm biệt
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - tạm biệt em
+      - tạm biệt bot nhé
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - đúng vậy
+      - đúng
+      - đúng rồi
+      - vâng
+      - dạ
+      - nó đó
+      - chính xác
+
+  - intent: ask_ability
+    examples: |
+      - có thể làm những gì
+      - có chức năng gì
+      - giúp gì được không
+      - có thể giúp gì được không
+      - biết làm gì
+      - hỗ trợ được như thế nào
+      - cho xem các chức năng
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+      - no way
+      - not really
+      - không
+      - không phải
+      - không được
+      - không nên
+      - không bao giờ
+      - không có
+      - tôi nghĩ là không
+      - tôi không thích nó
+      - đó không phải là cách
+      - thật sự không phải
+
+  - intent: mood_great
+    examples: |
+      - perfect
+      - great
+      - amazing
+      - feeling like a king
+      - wonderful
+      - I am feeling very good
+      - I am great
+      - I am amazing
+      - I am going to save the world
+      - super stoked
+      - extremely good
+      - so so perfect
+      - so good
+      - so perfect
+
+  - intent: mood_unhappy
+    examples: |
+      - my day was horrible
+      - I am sad
+      - I don't feel very well
+      - I am disappointed
+      - super sad
+      - I'm so sad
+      - sad
+      - very sad
+      - unhappy
+      - not good
+      - not very good
+      - extremly sad
+      - so saad
+      - so sad
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: praise
+    examples: |
+      - bot giỏi quá
+      - great
+      - awesome
+      - làm tốt lắm
+      - ui giỏi thế
+      - bot thông minh
+
+  - intent: decry
+    examples: |
+      - quá tệ
+      - ngu ngốc
+      - chả biết gì cả
+      - ngu thật
+      - dở ghê
+      - có thế mà cũng không biết
+      - kém cỏi
+      - kém thật
+      - bạn làm mình thất vọng quá
+      - m làm t thất vọng quá
+
+  - intent: thankyou
+    examples: |
+      - cảm ơn
+      - thanks
+      - thankyou
+      - thank you
+      - good job
+      - thanks bot
+      - cảm ơn bot nha
+      - great! thanks
+      - thank you so much
+      - cảm ơn nha
+
+  - intent: ask_schedule
+    examples: |
+      - có chuyến đi từ đến không
+      - có vé xe đi từ đến không
+
+  - intent: ask_account
+    examples: |
+      - tôi muốn xem số điện thoại của tôi
+      - tôi muốn xem sđt của tôi
+      - tôi muốn xem sdt của tôi
+      - số điện thoại của tôi là gì
+      - sđt của tôi là gì
+      - sdt của tôi là gì
+      - tôi muốn thay đổi số điện thoại
+      - tôi muốn thay đổi sđt
+      - tôi muốn thay đổi sdt
+
+  - intent: ask_book_ticket
+    examples: |
+      - tôi muốn đặt vé xe
+      - đặt vé xe
+      - hãy đặt vé
+      - giúp tôi đặt vé
+      - tôi muốn nó khứ hồi
+      - khứ hồi
+      - hãy cho tôi vé khứ hồi
+
+  - intent: ask_garage
+    examples: |
+      - có mấy nhà xe
+      - có nhà xe nào
+      - có bao nhiêu nhà xe
+
+  - intent: ask_payment
+    examples: |
+      - tôi có thể thanh toán bằng cách nào?
+      - có những phương thức thanh toán nào?
+      - thanh toán qua thẻ tín dụng có được không?
+      - tôi muốn biết cách thanh toán
+
+  - intent: ask_route_info
+    examples: |
+      - chuyến nào đi từ [Hà Nội](city_name:start_place) đến [Đà Nẵng](city_name:end_place)?
+      - có lịch trình nào từ [TP.HCM](city_name:start_place) đến [Nha Trang](city_name:end_place) không?
+      - hãy cho tôi biết thông tin chuyến đi từ [Hà Nội](city_name:start_place) đến [Hồ Chí Minh](city_name:end_place)
+      - có chuyến [Cần Thơ](city_name:start_place) đi [Cà Mau](city_name:end_place) không
+      - có vé từ [Cần Thơ](city_name:end_place) về [Hồ Chí Minh](city_name:start_place) không
+      - có chuyến từ [Cần Thơ](city_name:start_place) đến [Hồ Chí Minh](city_name:end_place) không.
+
+  - intent: request_customer_support
+    examples: |
+      - chuyến nào đi từ Hà Nội đến Đà Nẵng?
+      - có lịch trình nào từ TP.HCM đến Nha Trang không?
+      - hãy cho tôi biết thông tin chuyến đi từ Hà Nội đến Hồ Chí Minh
+
+  - intent: provide_location
+    examples: |
+      - chuyến nào đi từ Hà Nội đến Đà Nẵng?
+      - có lịch trình nào từ TP.HCM đến Nha Trang không?
+      - hãy cho tôi biết thông tin chuyến đi từ Hà Nội đến Hồ Chí Minh
+
+  - intent: provide_time
+    examples: |
+      - chuyến nào đi từ Hà Nội đến Đà Nẵng?
+      - có lịch trình nào từ TP.HCM đến Nha Trang không?
+      - hãy cho tôi biết thông tin chuyến đi từ Hà Nội đến Hồ Chí Minh
+
+  - intent: provide_quantity
+    examples: |
+      - chuyến nào đi từ Hà Nội đến Đà Nẵng?
+      - có lịch trình nào từ TP.HCM đến Nha Trang không?
+      - hãy cho tôi biết thông tin chuyến đi từ Hà Nội đến Hồ Chí Minh

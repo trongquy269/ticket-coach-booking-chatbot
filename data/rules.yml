@@ -1,0 +1,54 @@
+version: "3.1"
+
+rules:
+  - rule: Respond to greeting
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Respond to goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Respond to account inquiry
+    steps:
+      - intent: ask_account
+      - action: utter_account_info
+
+  - rule: Respond to garage inquiry
+    steps:
+      - intent: ask_garage
+      - action: action_get_garage_info
+
+  - rule: Customer Support Assistance
+    steps:
+      - intent: request_customer_support
+      - action: utter_customer_support
+
+  - rule: Respond to praise
+    steps:
+      - intent: praise
+      - action: utter_thankyou
+
+  - rule: Respond to complaint
+    steps:
+      - intent: decry
+      - action: utter_sorry
+
+  - rule: Provide schedule information
+    steps:
+      - intent: ask_schedule
+      - action: utter_schedule_details
+
+  - rule: Provide route
+    steps:
+      - intent: ask_route_info
+      - action: action_get_route
+
+
+
+  - rule: Default Fallback
+    steps:
+      - intent: nlu_fallback
+      - action: utter_fallback
